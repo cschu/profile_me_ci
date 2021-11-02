@@ -4,7 +4,7 @@ IncludeCmd: yes
 
 %environment
 export LC_ALL=C
-export PATH=$PATH:/opt/software/miniconda3/bin
+export PATH=$PATH:/opt/software/miniconda3/bin:/opt/software/eggnog-mapper:/opt/software/eggnog-mapper/bin
 
 %post
   apt-get update
@@ -30,7 +30,8 @@ export PATH=$PATH:/opt/software/miniconda3/bin
   git clone https://github.com/eggnogdb/eggnog-mapper.git
   cd eggnog-mapper
   git log -1
-  /opt/software/miniconda3/bin/conda install --file requirements.txt
+  # /opt/software/miniconda3/bin/conda install --file requirements.txt
+  pip install -r requirements.txt
 
 
   ## blargh
