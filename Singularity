@@ -33,5 +33,10 @@ export PATH=$PATH:/opt/software/miniconda3/bin:/opt/software/eggnog-mapper:/opt/
   # /opt/software/miniconda3/bin/conda install --file requirements.txt
   pip install -r requirements.txt
 
-
+  # install macsyfinder
+  cd /opt/software
+  git clone https://github.com/gem-pasteur/macsyfinder.git
+  cd macsyfinder
+  pip install .
+  
   ## blargh
