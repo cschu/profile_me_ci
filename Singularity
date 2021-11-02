@@ -25,9 +25,6 @@ export PATH=$PATH:/opt/software/miniconda3/bin
 
   /opt/software/miniconda3/bin/conda install -y -c conda-forge -c bioconda diamond prodigal hmmer cd-hit 'pip<=20.2.1'
 
-
-  mkdir /opt/software
-
   # install eggnog-mapper
   cd /opt/software
   git clone https://github.com/eggnogdb/eggnog-mapper.git
