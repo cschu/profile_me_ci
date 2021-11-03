@@ -23,7 +23,8 @@ export PATH=$PATH:/opt/software/miniconda3/bin:/opt/software/eggnog-mapper:/opt/
   bash Miniconda3-latest-Linux-x86_64.sh -b -p /opt/software/miniconda3
   rm -f Miniconda3-latest-Linux-x86_64.sh
 
-  /opt/software/miniconda3/bin/conda install -y -c conda-forge -c bioconda diamond prodigal hmmer cd-hit 'pip<=20.2.1'
+  /opt/software/miniconda3/bin/conda install -y -c conda-forge -c bioconda diamond prodigal hmmer cd-hit 'pip<=20.2.1' vsearch samtools cdbtools bwa
+  # - perl
 
   # install eggnog-mapper
   cd /opt/software
