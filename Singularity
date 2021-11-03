@@ -4,7 +4,7 @@ IncludeCmd: yes
 
 %environment
 export LC_ALL=C
-export PATH=$PATH:/opt/software/miniconda3/bin:/opt/software/eggnog-mapper:/opt/software/eggnog-mapper/bin
+export PATH=$PATH:/opt/software/miniconda3/bin:/opt/software/eggnog-mapper:/opt/software/eggnog-mapper/bin:/opt/software/classify-genomes
 
 %post
   apt-get update
@@ -39,5 +39,11 @@ export PATH=$PATH:/opt/software/miniconda3/bin:/opt/software/eggnog-mapper:/opt/
   git clone https://github.com/gem-pasteur/macsyfinder.git
   cd macsyfinder
   pip install .
+
+  # install classify-genomes
+  cd /opt/software
+  git clone https://github.com/AlessioMilanese/classify-genomes.git
+  cd classify-genomes
+  python setup.py
   
   ## blargh
