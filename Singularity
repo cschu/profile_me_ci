@@ -45,8 +45,10 @@ alias python="python3"
   # install classify-genomes
   # export PATH=/opt/software/miniconda3/bin
   cd /opt/software
-  git clone https://github.com/AlessioMilanese/classify-genomes.git
+  # git clone https://github.com/AlessioMilanese/classify-genomes.git
+  git clone https://github.com/cschu/classify-genomes.git
   cd classify-genomes
+  git checkout refactor/allow_containerisation
   python3 setup.py
   
   ## blargh
