@@ -4,7 +4,7 @@ IncludeCmd: yes
 
 %environment
 export LC_ALL=C
-export PATH=$PATH:/opt/software/miniconda3/bin:/opt/software/eggnog-mapper:/opt/software/eggnog-mapper/bin:/opt/software/classify-genomes
+export PATH=/opt/software/miniconda3/bin:/opt/software/eggnog-mapper:/opt/software/eggnog-mapper/bin:/opt/software/classify-genomes:$PATH
 
 %post
   apt-get update
@@ -22,6 +22,8 @@ export PATH=$PATH:/opt/software/miniconda3/bin:/opt/software/eggnog-mapper:/opt/
   wget -q https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh 
   bash Miniconda3-latest-Linux-x86_64.sh -b -p /opt/software/miniconda3
   rm -f Miniconda3-latest-Linux-x86_64.sh
+
+  export PATH=/opt/software/miniconda3/bin
 
   /opt/software/miniconda3/bin/conda install -y -c conda-forge -c bioconda diamond prodigal hmmer cd-hit 'pip<=20.2.1' vsearch samtools cdbtools bwa
   # - perl
