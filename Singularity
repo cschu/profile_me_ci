@@ -23,7 +23,6 @@ export PATH=/opt/software/miniconda3/bin:/opt/software/eggnog-mapper:/opt/softwa
   bash Miniconda3-latest-Linux-x86_64.sh -b -p /opt/software/miniconda3
   rm -f Miniconda3-latest-Linux-x86_64.sh
 
-  export PATH=/opt/software/miniconda3/bin
 
   /opt/software/miniconda3/bin/conda install -y -c conda-forge -c bioconda diamond prodigal hmmer cd-hit 'pip<=20.2.1' vsearch samtools cdbtools bwa
   # - perl
@@ -43,9 +42,10 @@ export PATH=/opt/software/miniconda3/bin:/opt/software/eggnog-mapper:/opt/softwa
   pip install .
 
   # install classify-genomes
+  # export PATH=/opt/software/miniconda3/bin
   cd /opt/software
   git clone https://github.com/AlessioMilanese/classify-genomes.git
   cd classify-genomes
-  python setup.py
+  python3 setup.py
   
   ## blargh
