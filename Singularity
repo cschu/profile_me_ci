@@ -5,6 +5,7 @@ IncludeCmd: yes
 %environment
 export LC_ALL=C
 export PATH=/opt/software/miniconda3/bin:/opt/software/eggnog-mapper:/opt/software/eggnog-mapper/bin:/opt/software/classify-genomes:$PATH
+alias python="python3"
 
 %post
   apt-get update
