@@ -35,13 +35,13 @@ alias python="python3"
   cd eggnog-mapper
   git log -1
   # /opt/software/miniconda3/bin/conda install --file requirements.txt
-  pip3 install -r requirements.txt
+  /opt/software/miniconda3/bin/pip install -r requirements.txt
 
   # install macsyfinder
   cd /opt/software
   git clone https://github.com/gem-pasteur/macsyfinder.git
   cd macsyfinder
-  pip3 install .
+  /opt/software/miniconda3/bin/pip install .
 
   # install classify-genomes
   # export PATH=/opt/software/miniconda3/bin
