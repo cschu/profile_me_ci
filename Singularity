@@ -4,7 +4,7 @@ IncludeCmd: yes
 
 %environment
 export LC_ALL=C
-export PATH=/opt/software/miniconda3/bin:/opt/software/eggnog-mapper:/opt/software/eggnog-mapper/bin:/opt/software/classify-genomes:$PATH
+export PATH=/opt/software/eggnog-mapper:/opt/software/eggnog-mapper/bin:/opt/software/classify-genomes:$PATH:/opt/software/miniconda3/bin
 alias python="python3"
 
 %post
@@ -35,13 +35,15 @@ alias python="python3"
   cd eggnog-mapper
   git log -1
   # /opt/software/miniconda3/bin/conda install --file requirements.txt
-  /opt/software/miniconda3/bin/pip install -r requirements.txt
+  # /opt/software/miniconda3/bin/pip install -r requirements.txt
+  pip3 install -r requirements.txt
 
   # install macsyfinder
   cd /opt/software
   git clone https://github.com/gem-pasteur/macsyfinder.git
   cd macsyfinder
-  /opt/software/miniconda3/bin/pip install .
+  # /opt/software/miniconda3/bin/pip install .
+  pip3 install .
 
   # install classify-genomes
   # export PATH=/opt/software/miniconda3/bin
