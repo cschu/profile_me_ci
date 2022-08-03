@@ -30,7 +30,16 @@ alias python="python3"
   rm -f Miniconda3-latest-Linux-x86_64.sh
 
 
-  /opt/software/miniconda3/bin/conda install -y -c conda-forge -c bioconda diamond prodigal hmmer cd-hit 'pip<=20.2.1' vsearch samtools cdbtools bwa
+  /opt/software/miniconda3/bin/conda install -y -c conda-forge -c bioconda \
+    'diamond=2.0.11=hdcc8f71_0' \
+    'prodigal=2.6.3=h779adbc_3' \
+    'hmmer=3.3.2=h1b792b2_1' \
+    'cd-hit=4.8.1=h2e03b76_5' \
+    'pip<=20.2.1' \
+    'vsearch=2.17.1=h95f258a_0' \
+    samtools \
+    'cdbtools=0.99=h9a82719_6' \
+    'bwa=0.7.17=h5bf99c6_8'
   # /opt/software/miniconda3/bin/conda install -y -c conda-forge -c bioconda diamond prodigal hmmer cd-hit vsearch samtools cdbtools bwa
   # - perl
 
@@ -38,6 +47,7 @@ alias python="python3"
   cd /opt/software
   git clone https://github.com/eggnogdb/eggnog-mapper.git
   cd eggnog-mapper
+  git checkout 5415cc83b66450030f6d19915eec6bb4007e13ab
   git log -1
   # /opt/software/miniconda3/bin/conda install --file requirements.txt
   /opt/software/miniconda3/bin/pip install -r requirements.txt
@@ -47,6 +57,7 @@ alias python="python3"
   cd /opt/software
   git clone https://github.com/gem-pasteur/macsyfinder.git
   cd macsyfinder
+  git checkout 419224e859cb4cd710bc0fdfa251d817ba53b3b6
   /opt/software/miniconda3/bin/pip install .
   # pip3 install .
 
