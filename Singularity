@@ -37,7 +37,7 @@ alias python="python3"
     'cd-hit=4.8.1=h2e03b76_5' \
     'pip<=20.2.1' \
     'vsearch=2.17.1=h95f258a_0' \
-    samtools \
+    'samtools=1.7-1' \
     'cdbtools=0.99=h9a82719_6' \
     'bwa=0.7.17=h5bf99c6_8'
   # /opt/software/miniconda3/bin/conda install -y -c conda-forge -c bioconda diamond prodigal hmmer cd-hit vsearch samtools cdbtools bwa
