@@ -2,6 +2,10 @@ Bootstrap: docker
 From: ubuntu:20.04
 IncludeCmd: yes
 
+%labels
+  MAINTAINER cschu (cschu1981@gmail.com)
+  VERSION v.0.2
+
 %environment
 export LC_ALL=C
 #export PATH=/opt/software/eggnog-mapper:/opt/software/eggnog-mapper/bin:/opt/software/classify-genomes:$PATH:/opt/software/miniconda3/bin
@@ -54,6 +58,8 @@ alias python="python3"
   cd classify-genomes
   git checkout refactor/allow_containerisation
   python3 setup.py
+  
+  chmod -R 777 db_mOTU
   
   ## blargh
   # trigger rebuild
